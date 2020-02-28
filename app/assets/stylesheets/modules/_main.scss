@@ -1,0 +1,68 @@
+.post_main{
+  height: calc(100vh - 100px);
+  width:100vw;
+  display: flex;
+  
+  .main_side{
+    height: calc(100vh - 100px);
+    width: 200px;
+    background-color: #FFD5EC;
+    padding: 35px 40px;
+
+    p.nickname{
+      padding-bottom: 50px;
+      text-align: center;
+      font-size: 18px;
+
+    }
+    p.new-post{
+    border: solid 1px #FF00FF;/*線色*/
+    padding: 0.5em;/*文字周りの余白*/
+    border-radius: 0.5em;/*角丸*/
+    text-align: center;
+
+    a{
+    color: #FF00FF;/*文字色*/
+    text-decoration: none;
+    
+
+    }
+
+    }
+  }
+  .main_post{
+    height: calc(100vh - 100px);
+    width: calc(100vw - 200px);
+    background-color:#FFF0F5;
+    padding: 35px 40px; 
+    background-image: url("16.png");
+    background-position: right;
+    background-repeat: no-repeat;
+  
+
+    .posts{
+      // padding-bottom: 40px;
+      border: solid 2px #ffddff;
+      padding: 0.5em;
+      border-radius: 0.5em;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      
+      &_left{
+        
+        p.psts_info_talker{
+          margin-bottom: 10px;
+          font-size: 20px;
+        }
+        p.posts_taxt {
+          font-size: 15px;
+          color: #434a54;
+      }
+    }
+      &_right{
+      }
+  }
+  
+  }
+}
