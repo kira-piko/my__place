@@ -1,24 +1,32 @@
-# README
+# my-space DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|nickname|string|null: false|
+### Association
+- has_many :posts
+- has_many :likes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## postsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text||
+|image|string||
+|user|references|null: false, foreign_key: true|
+|like|references|null: false, foreign_key: true|
 
-Things you may want to cover:
+### Association
+- belongs_to :user
+- belongs_to :like
 
-* Ruby version
+## likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user|references|null: false, foreign_key: true|
+|post|references|null: false, foreign_key: true|
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- has_many :users
+- has_many :posts
