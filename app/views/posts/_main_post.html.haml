@@ -1,7 +1,7 @@
 .post_main
   .main_side
     %p.nickname
-      ="新名"
+      = current_user.name
     %p.new-post
       = link_to "#",class:"new-post" do
         投稿する
