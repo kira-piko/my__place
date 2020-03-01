@@ -4,7 +4,7 @@
   display: flex;
   background-image: url("15.jpg");
   background-position: top;
-  border-bottom:solid 1px #FF55FF;
+  border-bottom:solid 1px #ffddff;
 
   .name-bar{
     width: 300px;
@@ -30,12 +30,17 @@
        
      li{
       height: 40px;
-      border: solid 2px white;
-      line-height:40px;
+      border: solid 1px #FF00FF;/*線色*/
+      padding: 0.5em;/*文字周りの余白*/
+      border-radius: 0.5em;/*角丸*/
+      text-align: center;
+      
       
       a{
-        color: black;
+        color: #FF00FF;/*文字色*/
         text-decoration: none;
+        font-weight: bolder;
+        
       }
      }
     }

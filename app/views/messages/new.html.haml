@@ -1,0 +1,12 @@
+.form
+  = form_for @message do |form|
+    投稿する
+    = form.text_field :content, placeholder: "content"
+    = form.text_field :image, placeholder: "image "
+    = form.submit "SEND"
+
+
+
+
+-# placeholder: フォームなどの入力欄にあらかじめ記入されている薄い灰色のテキストのこと
+-# 4行目の：　後はマイグレーションのカラム名
