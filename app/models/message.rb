@@ -1,9 +1,9 @@
 class Message < ApplicationRecord
-# belongs_to :user
+belongs_to :user
 
-  # validates :content, presence: true, unless: :image?
+validates :content,presence: true, length: { maximum: 300}
 
-  # mount_uploader :image, ImageUploader
+mount_uploader :image, ImageUploader
 end
 
 

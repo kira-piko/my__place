@@ -1,12 +1,17 @@
+= render partial: "message"
+
 .form
-  = form_for @message do |form|
-    投稿する
-    = form.text_field :content, placeholder: "content"
-    = form.text_field :image, placeholder: "image "
-    = form.submit "SEND"
-
-
-
-
--# placeholder: フォームなどの入力欄にあらかじめ記入されている薄い灰色のテキストのこと
--# 4行目の：　後はマイグレーションのカラム名
+  = form_for @message do |f|
+    .message
+      .message-name
+        %h2
+          今日の出来事
+        = render 'layouts/error_messages', model: f.object
+      .message__image
+        = f.label :image, class: 'message__image__box' do
+          = f.file_field :image, class: 'message__image__file'
+          = icon('fas', 'camera', class: 'icon')
+      .message__text
+        = f.text_area :content, class: 'message__text__area',placeholder: "何があったの？"
+      .message__btn
+        = f.submit "投稿",class: 'message__btn__box'

@@ -1,0 +1,62 @@
+.form{
+  height: calc(100vh - 100px);
+  width: 100vw;
+  padding: 30px 0 ;
+  background-color:	white;
+  .message{
+    width: 70%;
+    height: 529px;
+    margin: 0 auto;
+    padding: 20px 90px;
+    border-radius: 0.5em;
+    background-color: #FFF0F5;
+    .message-name{
+      text-align: center;
+      h2{
+        font-size: 30px;
+        color: palevioletred;
+        font-weight: bolder;
+      }
+    }
+    &__image{
+      background-color:#FFFAFA;
+      border: 1px dashed #ccc;
+      margin: 20px auto;
+      height: 150px;
+      width: 300px;
+      border-radius: 0.5em;
+      cursor: pointer;
+      &__file{
+         display: none;
+      }
+       .icon{
+        height: 100px;
+        width: 300px;
+        text-align: center;
+        margin-top: 50px;
+        font-size: 30px;
+        color: thistle;
+      }
+    }
+    .message__text__area{
+      height: 170px;
+      width: 100%;
+      font-size: 15px;
+      padding: 10px;
+      border-radius: 0.5em;
+      border: 1px dashed #ccc;
+      background-color: #FFFAFA;
+    }
+    &__btn{
+      height: 50px;
+      margin-top: 20px;
+      margin-bottom: 0;
+      text-align: center;
+      .message__btn__box{
+        height: 50px;
+        width: 100px;
+        color: palevioletred;
+      }
+    }
+  } 
+}
